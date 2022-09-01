@@ -1,0 +1,452 @@
+/* general styling */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Mobile styles */
+body {
+    height: 100vh;
+    background-color: #00369B;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: .9rem;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+/* header styling */
+header {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    height: fit-content;
+    align-items: center;
+}
+
+h1 {
+    color: #FFFBDD;
+    display: block;
+    font-size: 1.5rem;
+}
+
+.collapsible {
+    background-color: #00369b;
+    color: #FFFBDD;
+    font-family: 'Chakra Petch', sans-serif;
+    cursor: pointer;
+    padding: 15px 0 5px;
+    width: fit-content;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: large;    
+}
+
+.active,
+.collapsible:hover {
+    color: #62fa62;
+}
+
+.collapsible:focus {
+    color: #62fa62;
+}
+
+
+.collapsible-content {
+    padding: 20px;
+    display: none;
+    overflow: hidden;
+    color: #00369b;
+    background-color: #FFFBDD;
+    border: 2px solid #021e51;
+    border-radius: .3rem;
+    box-shadow: 5px 10px 15px -7px #00014A;
+    text-align: center;
+    z-index: 3;
+}
+
+/* start game div styling */
+.start-game {
+    color: #00369b;
+    background-color: #FFFBDD;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 250px;
+    height: 360px;
+    margin: 10px;
+    border-radius: 1.5rem;
+    box-shadow: 2px 5px 16px 0px #0B325E, 10px 16px 18px 0px rgba(0,13,92,0.62);
+    text-align: center;
+}
+
+.start-game h2 {
+    font-size: 1.4rem;
+    color: #00369b;
+}
+
+.button {
+    width: 110px;
+    height: 35px;
+    border: 1px solid #00369b;
+    border-radius: .7rem;
+    box-shadow: 5px 10px 15px -7px #00014A;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: .9rem;
+    color: #00369b;
+    background-color: #baffba;
+    margin: 10px;
+    outline: none;
+}
+
+.button:hover {
+    background-color: #62fa62;
+    cursor: pointer;
+}
+
+.button:focus {
+    background-color: #62fa62;
+}
+
+/* game play div styling */
+.game-container {
+    color: #00369b;
+    background-color: #FFFBDD;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 360px;
+    border-radius: 1.5rem;
+    box-shadow: 2px 5px 16px 0px #0B325E, 10px 16px 18px 0px rgba(0,13,92,0.62);
+    text-align: center;
+}
+
+.timer {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.score {
+    margin-bottom: 20px;
+    padding: 5px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.example-word {
+    margin-bottom: 10px;
+    padding: 8px;
+    color: #021e51;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 1px solid #ffe313;
+    border-radius: .2rem;
+    width: 80%;
+    background-color: #fffef6;
+}
+
+.answer-word {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 80%;
+    text-align: center;
+    outline: none;
+    color: #021e51;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #fffef6;
+    border: 1px solid #ffe313;
+    border-radius: .2rem;
+}
+
+.answer-word:focus {
+    border-color: #d1b900;
+}
+
+.correct {
+    color: #02b502;
+}
+
+.incorrect {
+    color: red;
+    text-decoration: underline;
+}
+
+/* end game div styling */
+.end-game-container {
+    color: #00369b;
+    background-color: #FFFBDD;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 250px;
+    height: 360px;
+    border-radius: 1.5rem;
+    box-shadow: 2px 5px 16px 0px #0B325E, 10px 16px 18px 0px rgba(0,13,92,0.62);
+    text-align: center;
+    z-index: 1;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-items: center;
+}
+
+.text-outcome {
+    margin: 10px;
+}
+
+.form-box {
+    margin-bottom: 5px;
+    color: #021e51;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1rem;
+    background-color: #fffef6;
+    border: 1px solid #ffe313;
+    border-radius: .2rem;
+    text-align: center;
+}
+
+.form-box:focus {
+    border-color: #d1b900;
+}
+
+.form-box:hover {
+    border-color: #d1b900;
+    cursor: pointer;
+}
+
+/* footer styling */
+footer {
+    position: absolute;
+    bottom: 0;
+    color: #FFFBDD;
+    text-align: center;
+}
+
+footer p {
+    padding: 20px;
+}
+
+/* small tablet styles */
+@media screen and (min-width: 768px) {
+    /* general styling */
+    body {
+        font-size: 1.1rem;
+    }
+
+    /* heading styling*/
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    /* start game styling */
+    .start-game {
+        width: 275px;
+        height: 410px;
+    }
+
+    .start-game h2 {
+        font-size: 1.6rem;
+    }
+
+    .button {
+        width: 120px;
+        height: 39px;
+        font-size: 1rem;
+    }
+
+    /* game styling */
+    .game-container {
+        width: 275px;
+        height: 410px;
+    }
+
+    .timer {
+        font-size: 1.3rem;
+    }
+    
+    .score {
+        font-size: 1.3rem;
+    }
+
+    .example-word {
+        font-size: 1.3rem;
+    }
+    
+    .answer-word {
+        font-size: 1.3rem;
+    }
+
+    /* end game styling */
+    .end-game-container {
+        width: 275px;
+        height: 410px;
+    }
+
+    .form-box {
+        font-size: 1.2rem;
+    }
+
+    .game-outcome {
+        font-size: 1.3rem;
+        padding-top: 5px;
+    }
+}
+
+/* large tablet and laptop styles */
+@media screen and (min-width: 960px) {
+    /* general styling */
+    body {
+        font-size: 1.2rem;
+    }
+
+    /* heading styling */
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    /* start game styling */
+    .start-game {
+        width: 300px;
+        height: 450px;
+    }
+
+    .start-game h2 {
+        font-size: 1.8rem;
+    }
+
+    .button {
+        width: 130px;
+        height: 43px;
+        font-size: 1.1rem;
+    }
+
+    /* game styling */
+    .game-container {
+        width: 300px;
+        height: 450px;
+    }
+
+    .timer {
+        font-size: 1.4rem;
+    }
+    
+    .score {
+        font-size: 1.4rem;
+    }
+
+    .example-word {
+        font-size: 1.4rem;
+    }
+    
+    .answer-word {
+        font-size: 1.4rem;
+    }
+
+    /* end game styling */
+    .end-game-container {
+        width: 300px;
+        height: 450px;
+    }
+    
+    .form-box {
+        font-size: 1.3rem;
+    }
+
+    .game-outcome {
+        font-size: 1.4rem;
+    }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px) {
+    /* general styling */
+    body {
+        font-size: 1.3rem;
+    }
+
+    /* heading styling */
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    /* start game styling */
+    .start-game {
+        width: 350px;
+        height: 500px;
+    }
+
+    .start-game h2 {
+        font-size: 2.0rem;
+    }
+
+    .button {
+        width: 140px;
+        height: 47px;
+        font-size: 1.2rem;
+    }
+    
+    /* game styling */
+    .game-container {
+        width: 350px;
+        height: 500px;
+    }
+
+    .score {
+        font-size: 1.5rem;
+    }
+
+    .example-word {
+        font-size: 1.5rem;
+    }
+
+    .example-word {
+        font-size: 1.5rem;
+    }
+    
+    .answer-word {
+        font-size: 1.5rem;
+    }
+
+    /* end game styling */
+    .end-game-container {
+        width: 350px;
+        height: 500px;
+    }
+    
+    .form-box {
+        font-size: 1.4rem;
+    }
+
+    .game-outcome {
+        font-size: 1.5rem;
+    }
+}
